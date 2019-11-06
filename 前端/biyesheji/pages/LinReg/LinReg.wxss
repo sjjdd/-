@@ -1,0 +1,37 @@
+.content{
+  margin-top:40px;
+}
+.account{
+  display:flex;
+  flex-direction: row;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  width:90%;
+}
+.title{
+  margin-right: 30px;
+  font-weight: bold;
+}
+.hr{
+  border:1px solid #ccc;
+  opacity: 0.2;
+  width:90%;
+  margin: 0 auto;
+  background-color: red;
+}
+.btn{
+  width:90%;
+  margin-top:40px;
+  color:#999;
+  border-radius: 98rpx;
+}
+.register{
+  fornt-size:5px;
+  margin-top:10px;
+  color:#43c729;
+  position: absolute;
+  right: 10px;
+  text-decoration: underline;
+  border-radius: 98rpx;
+}

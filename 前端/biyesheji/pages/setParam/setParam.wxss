@@ -1,0 +1,84 @@
+
+textarea{
+  width:700rpx;
+  height:500rpx;
+  margin-left:10rpx;
+  margin-rignt:10rpx;
+  margin-top:10rpx;
+}
+.textarea-bg{
+  background-color: #999;
+  padding:10rpx;
+  font-size:32rpx;
+}
+.title-bg{
+  font-size:32rpx;
+  margin-left:10rpx;
+  margin-right:10rpx;
+  margin-top:10rpx;
+  color:#43c729;
+}
+.submit{
+  width:80%;
+  margin-top:20rpx;
+  background-color: burlywood;
+  color:white;
+  border-radius: 98rpx;
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content:center;
+/*修改圆角*/
+}
+.submit::after{
+  border-radius: 98rpx;
+  border:0;
+}
+.btnImg{
+ margin-right:8rpx;
+ width:50rpx;
+  height:50rpx;
+}
+/*按钮点击效果*/
+.btn-hover{
+  position:relative;
+  top:3rpx;
+  box-shadow:0px 0px 8px #999 inset;
+}
+.question-images{
+  display:flex;
+  align-items:center;
+  margin-top:40rpx;
+}
+.q-image-wrap{
+  width:31%;
+  margin-right:10rpx;
+}
+.q-image{
+  flex:1;
+  height:200rpx;
+  width:100%;
+}
+.q-image-remover{
+  text-align:center;
+}
+.goodbutton {
+  margin-top: 30px;
+  width: 80%;
+  background-color: rgb(252, 126, 67);
+  color: white;
+  border-radius: 98rpx;
+  background: #43c729;
+}
+
+/* 按下变颜色 */
+.hover {
+  background:  rgb(236, 179, 156);
+}
+.imagesize{
+  display:flex;
+  height:auto;
+  justify-content: center;
+  align-items: center;
+  border: 5px dotted #43c729;
+}

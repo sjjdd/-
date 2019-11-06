@@ -1,0 +1,21 @@
+<view class="father_view" >
+    <!--<view class="son_view">-->
+    <!--<view class="title-bg">植物编号</view>-->
+    <!--<textarea class="textarea-bg" placeholder="请输入该植物的编号" bindblur="getDatatemp" auto-height="true"></textarea>-->
+    <!--</view>-->
+    <view class="son_view">
+        <view class="title-bg">房间id</view>
+        <textarea class="textarea-bg" placeholder="请输入房间id" bindblur="getRoomid" ></textarea>
+    </view>
+    <view class="son_view">
+        <view class="title-bg">房间名</view>
+        <textarea class="textarea-bg" placeholder="请输入房间名，例如客厅，但请不要重复命名哦！" bindblur="getRoomname"></textarea>
+    </view>
+    <button bindtap="submitdata" class="goodbutton" hover-class="hover">提交</button>
+    <view>
+        <modal title="提示" hidden="{{modalHidden}}" confirm-text="确定"
+               cancel-text="取消"  bindconfirm="modalBindconfirm" bindcancel="modalBindcancel">
+            主人，您当真要提交数据了吗？
+        </modal>
+    </view>
+</view>

@@ -1,0 +1,16 @@
+<view class="content">
+    <view class="account">
+        <view class="title">账号</view>
+        <view class="num"><input bindinput="accountInput" placeholder="用户名" placeholder-style="color:#999"></input></view>
+    </view>
+    <view class="hr"></view>
+    <view class="account">
+       <view class="title">密码</view>
+        <!--bindinput是输入时的回调方法，bindblur是输入完成后失去焦点的回调方法-->
+        <view class="num"><input password="true" bindinput="pwdBlur" placeholder="请输入密码" placeholder-style="color:#999"></input></view>
+    </view>
+    <view class="hr"></view>
+    <button class="btn" bindtap="login" type="primary">登录</button>
+    <view>{{message}}</view>
+    <view class="register" bindtap="register">注册</view>
+</view>

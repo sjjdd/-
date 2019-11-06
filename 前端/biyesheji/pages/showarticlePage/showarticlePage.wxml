@@ -1,0 +1,5 @@
+<view>
+    <web-view src="{{articleurl}}">
+
+    </web-view>
+</view>

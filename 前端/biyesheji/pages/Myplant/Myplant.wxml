@@ -1,0 +1,45 @@
+<view class="content">
+    <view class="tip">
+        <view>我的植物家族</view>
+    </view>
+
+    <!--<view class="flex-row" style="display:flex;flex-direction:row"   wx:for="{{plants}}" wx:for-item="item">-->
+         <!--<image src="{{item.plantpic}}" class="plant-img"></image>-->
+         <!--<view style="flex-direction:column">-->
+             <!--<view class="plantname">植物名:{{item.plantname}}</view>-->
+             <!--<view class="detail">植物描述：{{item.plantdes}}</view>-->
+         <!--</view>-->
+
+    <!--</view>-->
+
+        <view wx:for="{{plants}}" wx:for-item="item" data-index="{{index}}" bindtap="gotMyplant">
+            <view class="card">
+                <image class="image" mode="aspectFill" src="{{item.plantpic}}"></image>
+                <view class="time">植物名:{{item.plantname}}</view>
+                <view class="time">植物描述：{{item.plantdes}}</view>
+                <button type="warn" data-index="{{index}}" catchtap="deleteplant" class="delbtn">删除</button>
+            </view>
+
+        </view>
+
+
+    <!--<scroll-view>-->
+        <!--<view>-->
+            <!--<view class="card" wx:for="{{plants}}" wx:for-item="item" data-index="{{index}}">-->
+                <!--<view bindtap="gotMyplant"  >-->
+                    <!--<image class="image" mode="aspectFill" src="{{item.plantpic}}"></image>-->
+                    <!--<view class="time">植物名:{{item.plantname}}</view>-->
+                    <!--<view class="time">植物描述：{{item.plantdes}}</view>-->
+                <!--</view>-->
+
+                <!--<view data-index="{{index}}" bindtap="delltem" class="inner del">删除</view>-->
+            <!--</view>-->
+        <!--</view>-->
+    <!--</scroll-view>-->
+    <view>
+        <modal title="提示" hidden="{{modalHidden}}" confirm-text="确定"
+               cancel-text="取消"  bindconfirm="modalBindconfirm" bindcancel="modalBindcancel">
+            主人，您当真要删除该项了吗？
+        </modal>
+    </view>
+</view>

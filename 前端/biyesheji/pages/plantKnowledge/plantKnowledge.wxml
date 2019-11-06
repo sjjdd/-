@@ -1,0 +1,15 @@
+<view class="page">
+    <view class="tip">
+        <view>种植知识文章推送</view>
+    </view>
+    <view class="weui-cells" wx:for="{{articles}}" wx:for-item="item" data-index="{{index}}" bindtap="gotarticleinfo">
+        <view class="weui-cell">
+            <view class="weui-cell__bd weui-cell__primary">
+                <p>{{item.articletitle}}</p>
+            </view>
+            <view class="weui-cell__ft">
+               发布者：{{item.articleauthor}}
+            </view>
+        </view>
+    </view>
+</view>

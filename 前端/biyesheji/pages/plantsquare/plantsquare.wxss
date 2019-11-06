@@ -1,0 +1,27 @@
+.horizontal{
+  display: flex;
+  flex-direction: row;
+}
+.horizontal image{
+  width:200px;
+  height: 200px;
+  align-items: center;
+}
+.card{
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 4px 1px 1px #cccccc;
+  margin: 10px;
+  position: relative;
+}
+.author{
+  font-size:15px;
+  font-family: Arial;
+  color: #888;
+}
+.showcontent{
+  width: 100%;
+  height: auto;
+  font-size:20px;
+}

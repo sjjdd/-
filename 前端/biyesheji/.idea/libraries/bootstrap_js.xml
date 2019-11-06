@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="bootstrap.js" type="javaScript">
+    <properties>
+      <option name="frameworkName" value="ExtJS 4.2" />
+      <sourceFilesUrls>
+        <item url="file://D:/新中大科技股份有限公司/财税部门Extjs深入学习/财税部门Extjs深入学习/extjs-4.2/bootstrap.js" />
+        <item url="file://D:/新中大科技股份有限公司/财税部门Extjs深入学习/财税部门Extjs深入学习/extjs-4.2/ext-debug.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://D:/新中大科技股份有限公司/财税部门Extjs深入学习/财税部门Extjs深入学习/extjs-4.2/bootstrap.js" />
+      <root url="file://D:/新中大科技股份有限公司/财税部门Extjs深入学习/财税部门Extjs深入学习/extjs-4.2/ext-all.js" />
+      <root url="file://D:/新中大科技股份有限公司/财税部门Extjs深入学习/财税部门Extjs深入学习/extjs-4.2/ext-debug.js" />
+    </CLASSES>
+    <DOCUMENTATION>
+      <root url="http://docs.sencha.com/extjs/4.2.0/#!/api" />
+    </DOCUMENTATION>
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,53 @@
+<view class="father_view" >
+    <!--<view class="son_view">-->
+        <!--<view class="title-bg">植物编号</view>-->
+        <!--<textarea class="textarea-bg" placeholder="请输入该植物的编号" bindblur="getDatatemp" auto-height="true"></textarea>-->
+    <!--</view>-->
+    <view class="son_view">
+        <view class="title-bg">设备id</view>
+        <textarea class="textarea-bg" placeholder="请输入说明书上的产品id" bindblur="getDeviceid" auto-height="true"></textarea>
+    </view>
+    <view class="son_view">
+    <view class="title-bg">房间id</view>
+    <textarea class="textarea-bg" placeholder="请输入植物放置房间的id" bindblur="getRoomid" auto-height="true"></textarea>
+    </view>
+    <view class="son_view">
+        <view class="title-bg">植物名称</view>
+        <textarea class="textarea-bg" placeholder="请输入温度的阈值" bindblur="getDataname" auto-height="true"></textarea>
+    </view>
+    <view class="son_view">
+        <view class="title-bg">浇水阈值</view>
+        <!--bindblur是输入框失去焦点时触发-->
+        <textarea class="textarea-bg" placeholder="请输入浇水的阈值" bindblur="getDataBindTap" auto-height="true"></textarea>
+    </view>
+    <!--<view class="son_view">-->
+        <!--<view class="title-bg">光照阈值</view>-->
+        <!--<textarea class="textarea-bg" placeholder="请输入光照的阈值" bindblur="getDataflight" auto-height="true"></textarea>-->
+    <!--</view>-->
+    <view class="son_view">
+        <view class="title-bg">温度阈值</view>
+        <textarea class="textarea-bg" placeholder="请输入温度的阈值" bindblur="getDatatemp" auto-height="true"></textarea>
+    </view>
+    <view class="son_view">
+        <view class="title-bg">植物描述</view>
+        <textarea class="textarea-bg" placeholder="请简要描述你的植物" bindblur="getDatades" auto-height="true"></textarea>
+    </view>
+    <!--上传图片-->
+    <view class="">
+        <form bindsubmit="uploadImg">
+            <lable bindtap="chooseImg">点击选择图片</lable>
+            <view class="imagesize">
+                <image src="{{photos}}" ></image>
+            </view>
+
+            <button  form-type="submit"  class="goodbutton" hover-class="hover">上传</button>
+        </form>
+    </view>
+    <button bindtap="submitdata" class="goodbutton" hover-class="hover">提交</button>
+    <view>
+        <modal title="提示" hidden="{{modalHidden}}" confirm-text="确定"
+               cancel-text="取消"  bindconfirm="modalBindconfirm" bindcancel="modalBindcancel">
+            主人，您当真要提交数据了吗？
+        </modal>
+    </view>
+</view>

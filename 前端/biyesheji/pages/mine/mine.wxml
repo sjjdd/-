@@ -1,0 +1,74 @@
+<view class="content">
+    <view class="bg">
+        <!--<view class="head">-->
+            <!--<view class="headIcon">-->
+                <!--<image src="{{userInfo.avatarUrl}}" style="width:70px;height:70px;"></image>-->
+            <!--</view>-->
+            <!--<view class="login">-->
+                <!--{{userInfo.nickName}}-->
+            <!--</view>-->
+        <!--</view>-->
+        <block wx:if="{{!userInfo}}">
+            <!--判断用户信息是否被授权使用-->
+            <button  style="width:100px;height:50px;display:flex;align-items:center;" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+                授权登录
+            </button>
+        </block>
+        <block wx:else>
+           <view class="wx_info">
+               <view class="head">
+               <view class="headIcon">
+               <image src="{{userInfo.avatarUrl}}" style="width:70px;height:70px;"></image>
+               </view>
+               <view class="login">
+               {{userInfo.nickName}}
+               </view>
+               </view>
+           </view>
+        </block>
+    </view>
+    <view class="hr"></view>
+    <view class="item" bindtap="Myplant">
+        <view class="order">我的植物</view>
+        <view class="detail2">
+            <text> > </text>
+        </view>
+    </view>
+    <view class="hr"></view>
+    <view class="item" bindtap="plantKnowledge">
+        <view class="order">种植知识</view>
+        <view class="detail2">
+            <text> > </text>
+        </view>
+    </view>
+    <view class="hr"></view>
+    <view class="item" bindtap="setParam">
+        <view class="order">设置植物参数</view>
+        <view class="detail2">
+            <text> > </text>
+        </view>
+    </view>
+    <view class="hr"></view>
+    <view class="item" bindtap="setroomParam">
+        <view class="order">设置房间参数</view>
+        <view class="detail2">
+            <text> > </text>
+        </view>
+    </view>
+    <view class="hr"></view>
+    <view class="item" bindtap="publishidea">
+        <view class="order">心得发表</view>
+        <view class="detail2">
+            <text> > </text>
+        </view>
+    </view>
+    <view class="hr"></view>
+    <view class="item" bindtap="plantsuqare">
+        <view class="order">植物广场</view>
+        <view class="detail2">
+            <text> > </text>
+        </view>
+    </view>
+    <view class="hr"></view>
+    <button bindtap="Logout" class="goodbutton" hover-class="hover">退出登录</button>
+</view>

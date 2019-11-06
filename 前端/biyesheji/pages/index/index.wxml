@@ -1,0 +1,88 @@
+<!--index.wxml-->
+<!--顶部轮播图播放3张植物的照片-->
+<view class="content">
+  <view class="showplant">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgurls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" mode="aspectFill"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!--通知低温滚动条-->
+  <swiper class="swiper_container" wx:for-item="item" vertical="true" autoplay="true" circular="true" interval="5000">
+      <block wx:for="{{msgList}}">
+        <swiper-item >
+          <block wx:if="{{msgList.length>0}}">
+            <view class="swiper_item">公告：
+              <view wx:if="{{item.status===1}}">
+                主人您的房间温度过低不太适合您的{{item.plantname}}的生长
+              </view>
+              <view wx:if="{{item.status===2}}">
+                主人您的房间温度过高 不太适合您的{{item.plantname}}的生长
+              </view>
+              <view wx:if="{{item.status===-1}}">
+                暂无公告
+              </view>
+              <view wx:if="{{(msgList.length===1)&&(item.status===0)}}">
+                暂无公告
+              </view>
+            </view>
+          </block>
+        </swiper-item>
+      </block>
+  </swiper>
+  <!--<view class="top-text">我的植物</view>-->
+  <!--&lt;!&ndash;下拉框&ndash;&gt;-->
+  <!--<view class="top-selected" bindtap="bindShowMsg">-->
+    <!--<text>{{plant_name}}</text>-->
+    <!--<image src="../../images/down.png"></image>-->
+  <!--</view>-->
+  <!--&lt;!&ndash;下拉需要显示的列表&ndash;&gt;-->
+  <!--<view class="select_box" wx:if="{{select}}">-->
+    <!--<view wx:for="{{plants}}" wx:key="unique">-->
+      <!--<view class="select_one" bindtap="mySelect" data-name="{{item}}">{{item.plantname}}</view>-->
+    <!--</view>-->
+  <!--</view>-->
+  <!--简单的picker选择器-->
+  <view class="hr"></view>
+  <view class="topse">
+    <view class="splantstitle">请选择您的房间</view>
+    <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{rooms}}">
+      <view class="splantstitle">当前选择：{{rooms[index2]}}</view>
+    </picker>
+    <view class="hr"></view>
+  </view>
+  <scroll-view class="hot-box" scroll-y="true">
+    <view class="tbtitle">
+      房间的温湿度参数
+    </view>
+    <!--<canvas class="canvas" canvas-id="lineGraph1"></canvas>-->
+    <!--<canvas class="canvas" canvas-id="lineGraph2"></canvas>-->
+   <view class="card">
+     <view style="color:#888;text-align:center;margin-top:10px;">{{beijingtime}}</view>
+     <view style="color:#888;font-size:15px;margin-top:10px;text-align:center;">每隔一分钟刷新一次房间内的温湿度</view>
+     <view class="carditem"><image src="http://172.20.10.5:8091/img/温度.png" style="height:25px;width:25px;"></image>：{{roomtem}}℃</view>
+     <view class="carditem"> <image src="http://172.20.10.5:8091/img/湿度.png" style="height:25px;width:25px;"></image>：{{roomhum}}%</view>
+   </view>
+  </scroll-view>
+  <view class="hr"></view>
+  <view class="topse">
+    <view class="splantstitle">请选择您的植物</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{plants}}">
+      <view class="splantstitle">当前选择：{{plants[index]}}</view>
+    </picker>
+    <view class="hr"></view>
+  </view>
+  <scroll-view class="hot-box" scroll-y="true">
+    <view class="tbtitle">
+      植物的土壤湿度参数图
+    </view>
+    <view class="card2">
+      <canvas class="canvas" canvas-id="lineGraph1"></canvas>
+    </view>
+  </scroll-view>
+</view>
+
+

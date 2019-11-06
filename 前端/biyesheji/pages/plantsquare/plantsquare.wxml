@@ -1,0 +1,33 @@
+<view style="background:#F0F1F5;">
+    <view wx:for="{{feelings}}" wx:for-item="item" data-index="{{index}}" class="card">
+        <view class="author">发布者：{{item.username}}</view>
+        <view class="showcontent">发布内容：{{item.content}}</view>
+        <view wx:if="{{item.picnum==1}}">
+            <scroll-view scroll-x="true">
+                <view class="horizontal">
+                    <image src="{{item.plantpic1}}" mode='aspectFill'></image>
+                </view>
+
+            </scroll-view>
+
+        </view>
+        <view wx:elif="{{item.picnum==2}}">
+            <scroll-view scroll-x="true">
+                <view class="horizontal">
+                    <image src="{{item.plantpic1}}" mode='aspectFill'></image>
+                    <image src="{{item.plantpic2}}" mode='aspectFill'></image>
+                </view>
+
+            </scroll-view>
+        </view>
+        <view wx:elif="{{item.picnum==3}}">
+            <scroll-view  scroll-x="true">
+                <view class="horizontal">
+                    <image src="{{item.plantpic1}}" mode='aspectFill'></image>
+                    <image src="{{item.plantpic2}}" mode='aspectFill'></image>
+                    <image src="{{item.plantpic3}}" mode='aspectFill'></image>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+</view>

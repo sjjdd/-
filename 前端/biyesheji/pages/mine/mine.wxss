@@ -1,0 +1,59 @@
+.bg{
+  width:100%;
+  height:100px;
+  background-color: bisque;
+}
+.head{
+  display:flex;
+  flex-direction: row;
+}
+.headIcon{
+  margin:10px;
+}
+.headIcon image{
+  border-radius:50%;
+}
+.login{
+  color:#000;
+  font-size:15px;
+  font-weight:bold;
+  position:absolute;
+  left:100px;
+  margin-top:30px;
+}
+.hr{
+  width:100%;
+  height: 15px;
+  background-color: #F4F5F6;
+}
+.item{
+  display:flex;
+  flex-direction: row;
+}
+.order{
+  padding-top:15px;
+  padding-left:15px;
+  padding-bottom: 15px;
+  font-size: 15px;
+}
+.detail2{
+  font-size:15px;
+  position: absolute;
+  right: 10px;
+  height: 50px;
+  line-height: 50px;
+  color:#888888;
+}
+.goodbutton {
+  margin-top: 30px;
+  width: 80%;
+  background-color: rgb(252, 126, 67);
+  color: white;
+  border-radius: 98rpx;
+  background: #43c729;
+}
+
+/* 按下变颜色 */
+.hover {
+  background:  rgb(236, 179, 156);
+}

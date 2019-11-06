@@ -1,0 +1,134 @@
+/**index.wxss**/
+.showplant{
+  text-align: center;
+  width:100%;
+}
+.showplant swiper{
+  height:127px;
+}
+.slide-image{
+  width:100%;
+  height:127px;
+}
+.top-text{
+  float:left;
+}
+/*下拉框*/
+.top-selected{
+  width:50%;
+  display:flex;
+  float:right;
+  align-items:center;
+  justify-content:space-between;
+  border:1px solid #ccc;
+  padding:0 20px;
+  font-size:30rpx;
+
+}
+.select_box{
+  background-color: #fff;
+  padding:0 20rpx;
+  width:50%;
+  float:right;
+  position:relative;
+  z-index: 1;
+  overflow: hidden;
+  text-align: left;
+  animation: myfirst 0.5s;
+  font-size:30rpx;
+}
+.top-selected image{
+  height:50rpx;
+  width:50rpx;
+  position: absolute;
+  right:0rpx;
+}
+@keyframes myfirst {
+  from{height:0rpx;}
+  to{height:210rpx;}
+}
+ec-canvas{
+  width:100%;
+  height:100%;
+}
+.echart_box{
+  position: relative;
+  padding:40rpx 20rpx;
+  width:100%;
+  height:1000rpx;
+}
+.splantstitle{
+  font-family : 宋体,sans-serif;
+  font-style:itelic;
+  color:#000;
+  text-align: center;
+}
+.hr{
+  width:100%;
+  height: 15px;
+  background-color: #F4F5F6;
+}
+.topse{
+  background-image: url('http://172.20.10.5:8091/img/111.jpg');
+  border-radius: 98rpx;
+  background-size: 100% 100%;
+}
+scroll-view .canvas {
+  width: 100%;
+  height: 500rpx;
+  margin-top: 20rpx;
+  position:relative;
+}
+.tbtitle{
+  width:100%;
+  text-align: center;
+  font-family: 宋体,sans-serif;
+  color:#888;
+}
+.card {
+  margin-top: 100px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-image: url('http://172.20.10.5:8091/img/room.jpg');
+  box-shadow: 4px 1px 1px #cccccc;
+  margin: 8px;
+  position: relative;
+  height:200px;
+
+}
+.card2{
+  margin-top: 100px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-image: url('http://172.20.10.5:8091/img/room.jpg');
+  box-shadow: 4px 1px 1px #cccccc;
+  margin: 8px;
+  position: relative;
+  height:200px;
+}
+.content{
+  background-color:#F0F1F5;
+}
+.carditem{
+  color:#888;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+.swiper_container{
+  height:55rpx;
+  width:100%;
+}
+.swiper_item{
+  font-size:25rpx;
+  overflow:hidden;
+  text-overlow:ellipsis;
+  white-space:nowrap;
+  letter-spacing:2px;
+  color: #0bb20c;
+  display: flex;
+  flex-direction: row;
+}
+.hengxiang{
+  display: flex;
+  flex-direction: row;
+}

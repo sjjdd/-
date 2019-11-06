@@ -1,0 +1,31 @@
+<view class="content">
+
+    <view class="tip">
+        <view>{{plants[0].plantname}}</view>
+    </view>
+
+
+    <view class="card">
+            <image class="image" mode="aspectFill" src="{{plants[0].plantpic}}"></image>
+    </view>
+<view class="item">
+    <view class="title">基本信息</view>
+    <view class="region left">
+        <view class="edit" bindtap="editbaseplant">
+            <image src="{{edit}}" style="width:15px;height:15px"></image>编辑</view>
+            <view class="info-item">浇水阈值：{{plants[0].waterparam}}</view>
+            <view>温度阈值：{{plants[0].temperature}}</view>
+            <view>植物描述：{{plants[0].plantdes}}</view>
+             <button bindtap="water" class="btn" type="primary">{{water}}</button>
+    </view>
+</view>
+<view class="item" hidden="{{hidden}}">
+    <view class="title">更新信息</view>
+    <view class="region left">
+        <view class="info-item">浇水阈值：<input placeholder="输入修改值" bindblur="getwp" style="margin-top:5px;"></input> <button type="warn" class="updatebtn" bindtap="updatewp">修改</button></view>
+        <!--<view class="info-item">光照阈值：<input placeholder="输入修改值" bindblur="getgz" style="margin-top:5px;"></input><button type="warn" class="updatebtn" bindtap="updategz">修改</button></view>-->
+        <view class="info-item">温度阈值：<input placeholder="输入修改值" bindblur="getwd" style="margin-top:5px;"></input><button type="warn" class="updatebtn" bindtap="updatewd">修改</button></view>
+        <view class="info-item">植物描述：<input placeholder="输入修改值" bindblur="getms" style="margin-top:5px;"></input><button type="warn" class="updatebtn" bindtap="updatems">修改</button></view>
+    </view>
+</view>
+</view>
